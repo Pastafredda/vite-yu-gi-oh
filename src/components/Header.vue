@@ -1,15 +1,11 @@
 <script>
-import Header from './components/Header.vue'
-
 export default {
-  components: {
-    Header
-  }
+    name: 'Header'
 }
 </script>
 
 <template>
-  <Header />
+    <h1></h1>
 </template>
 
 <style lang="scss"></style>
