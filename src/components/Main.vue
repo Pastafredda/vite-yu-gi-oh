@@ -26,9 +26,10 @@ export default {
 
 <style lang="scss" scoped>
 main {
-    height: calc(100vh - 60px);
+    height: calc(100% - 60px);
     background-color: #d48f38;
     padding-top: 100px;
+    padding-bottom: 100px;
 
     .container {
         width: 80%;
@@ -46,6 +47,12 @@ main {
                 background-color: #212529;
                 color: white;
                 padding: 20px;
+            }
+
+            .listcard {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
             }
         }
 

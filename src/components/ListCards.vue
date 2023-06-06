@@ -1,5 +1,5 @@
 <script>
-import Card from './Card.vue'
+import Card from './card.vue'
 
 export default {
     name: 'ListCards',
