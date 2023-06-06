@@ -1,67 +1,20 @@
 <script>
 export default {
-    name: 'Card'
+    name: 'Card',
+    props: {
+        details: Object
+    }
 }
 </script>
 
 <template>
     <div class="card">
         <div class="card-image">
-            <img src="https://images.ygoprodeck.com/images/cards/34541863.jpg" alt="">
+            <img :src="details.card_images[0].image_url" alt="">
         </div>
         <div class="info">
-            <h2>titolo carta </h2>
-            <p>alien</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="card-image">
-            <img src="https://images.ygoprodeck.com/images/cards/34541863.jpg" alt="">
-        </div>
-        <div class="info">
-            <h2>titolo carta </h2>
-            <p>alien</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="card-image">
-            <img src="https://images.ygoprodeck.com/images/cards/34541863.jpg" alt="">
-        </div>
-        <div class="info">
-            <h2>titolo carta </h2>
-            <p>alien</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="card-image">
-            <img src="https://images.ygoprodeck.com/images/cards/34541863.jpg" alt="">
-        </div>
-        <div class="info">
-            <h2>titolo carta </h2>
-            <p>alien</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="card-image">
-            <img src="https://images.ygoprodeck.com/images/cards/34541863.jpg" alt="">
-        </div>
-        <div class="info">
-            <h2>titolo carta </h2>
-            <p>alien</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="card-image">
-            <img src="https://images.ygoprodeck.com/images/cards/34541863.jpg" alt="">
-        </div>
-        <div class="info">
-            <h2>titolo carta </h2>
-            <p>alien</p>
+            <h2>{{ details.name }}</h2>
+            <p>{{ details.archetype }}</p>
         </div>
     </div>
 </template>

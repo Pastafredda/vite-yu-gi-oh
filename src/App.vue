@@ -1,8 +1,8 @@
 <script>
 import { store } from './store.js';
 import axios from 'axios';
-import Header from './components/Header.vue'
-import Main from './components/main.vue'
+import Header from './components/Header.vue';
+import Main from './components/main.vue';
 
 
 
@@ -19,7 +19,16 @@ export default {
   methods: {
     getCard() {
       axios.get(store.apiURL)
+        .then(risposta => {
+          store.listCard = risposta.data.data;
+        })
+        .catch(error => {
+          console.log(error);
+        })
     }
+  },
+  created() {
+    this.getCard();
   }
 }
 </script>
