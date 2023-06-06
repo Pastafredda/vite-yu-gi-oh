@@ -10,7 +10,7 @@ export default {
 <template>
     <div class="card">
         <div class="card-image">
-            <img :src="details.card_images[0].image_url" alt="">
+            <img :src="details.card_images[0].image_url" :alt="details.card_images[0].image_url">
         </div>
         <div class="info">
             <h2>{{ details.name }}</h2>
@@ -34,11 +34,13 @@ export default {
 
         h2 {
             color: white;
-            margin: 20px 0;
+            font-size: 20px;
+            margin-top: 10px;
+            min-height: 60px;
         }
 
         p {
-            font-size: 24px;
+            font-size: 18px;
             padding-bottom: 10px;
         }
     }

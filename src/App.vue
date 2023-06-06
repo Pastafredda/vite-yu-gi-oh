@@ -9,7 +9,7 @@ import Main from './components/main.vue';
 export default {
   components: {
     Header,
-    Main,
+    Main
   },
   data() {
     return {

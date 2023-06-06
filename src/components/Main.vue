@@ -1,16 +1,20 @@
 <script>
-import ListCards from './ListCards.vue'
+import ListCards from './ListCards.vue';
+import Select from './Select.vue';
 
 export default {
     name: 'Main',
     components: {
-        ListCards
+        ListCards,
+        Select
+
     }
 }
 </script>
 
 <template>
     <main>
+        <Select />
         <div class="container">
             <div class="container-cards">
                 <div class="found">
@@ -28,8 +32,8 @@ export default {
 main {
     height: calc(100% - 60px);
     background-color: #d48f38;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 
     .container {
         width: 80%;
