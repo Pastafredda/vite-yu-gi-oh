@@ -14,9 +14,11 @@ export default {
 <template>
     <form class="select">
         <label for="archetype">
-            <select name="archetype" id="archetype">
-                <option value="Alien">Alien</option>
-                <option value="Archfiend">Archfiend</option>
+            <select name="archetype" id="archetype" v-model="store.selectedArchetype" @change="$emit('myselect')">
+                <option value="Choose an Archetype">Choose an Archetype</option>
+                <option v-for="(select, index) in store.listarchetype" :value="select.archetype_name" :key="index">{{
+                    select.archetype_name
+                }}</option>
             </select>
         </label>
 
@@ -28,11 +30,12 @@ export default {
     width: 80%;
     margin: 0 auto;
     padding: 0 0 40px 40px;
-
+    display: flex;
+    justify-content: end;
 
     select {
-        width: 110px;
-        background-color: white;
+        background-color: #d48f38;
+        color: white;
         border: none;
         border-radius: 6px;
         padding: 8px 12px;

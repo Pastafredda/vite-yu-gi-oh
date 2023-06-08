@@ -1,20 +1,19 @@
 <script>
 import ListCards from './ListCards.vue';
-import Select from './Select.vue';
 
 export default {
     name: 'Main',
     components: {
         ListCards,
-        Select
 
-    }
+    },
+
 }
 </script>
 
 <template>
     <main>
-        <Select />
+
         <div class="container">
             <div class="container-cards">
                 <div class="found">
