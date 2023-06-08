@@ -22,7 +22,7 @@ export default {
 <style lang="scss" scoped>
 .card {
     width: calc(100% / 5 - 20px);
-    margin: 0 0 20px;
+    margin: 10px 10px;
     background-color: #d48f38;
 
     img {

@@ -21,7 +21,7 @@ export default {
     getCard() {
       let myUrl = store.cardApi;
       if (store.selectedArchetype !== '') {
-        myUrl += `${store.apiParameter}=${store.selectedArchetype}`
+        myUrl += `&archetype=${store.selectedArchetype}`
 
       }
       axios.get(myUrl)
@@ -36,6 +36,7 @@ export default {
       axios.get(store.archetypeApi)
         .then(risposta => {
           store.listarchetype = risposta.data
+          console.log('ho clicccato');
         })
     },
   },
